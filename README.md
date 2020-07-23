@@ -12,7 +12,7 @@ I am using `gomplate` to populate the `/content/` directory from a datasource. H
 
 ## How to use
 
-The following examples are included:
+Install `hugo` and `gomplate`. Refer to their respective documentation sites for details how.
 
 ### Hugo Demo
 
@@ -22,7 +22,12 @@ This will populate `hugo-demo/content/posts/` with posts from `https://jsonplace
 
 Run `hugo server` to see it as a Hugo website in action.
 
-### API datasource
+
+### Gomplate Demos
+
+Navigate to `gomplate-demo` and try the different config files:
+
+#### API datasource
 
 ```
 gomplate --config api.yaml
@@ -32,7 +37,7 @@ This will populate `outputs/api` with posts from `https://jsonplaceholder.typico
 
 Sample output can be found at `sample-outputs/api/`
 
-### Local JSON file datasource
+#### Local JSON file datasource
 
 ```
 gomplate --config localjson.yaml
@@ -42,7 +47,7 @@ This will populate `outputs/localjson` with `.md` posts from `sources/datasource
 
 Sample output can be found at `sample-outputs/localjson/`
 
-### CSV file datasource
+#### CSV file datasource
 
 ```
 gomplate --config localcsv.yaml
