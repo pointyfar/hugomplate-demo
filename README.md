@@ -1,8 +1,14 @@
 # Hugo + Gomplate = Good Stuff
 
-Head over to the gomplate [docs](https://docs.gomplate.ca/) and Hugo [docs](https://gohugo.io/documentation/) for details of the respective projects.
+Head over to the [gomplate docs](https://docs.gomplate.ca/) or [Hugo docs](https://gohugo.io/documentation/) for details about those projects.
+
+Please treat this as a Proof of Concept rather than a proper Tutorial. Probably not for absolute beginners.
 
 ## What this is
+
+A project demonstrating what happens when you combine `gomplate` and `hugo`. 
+
+I am using `gomplate` to populate the `/content/` directory from a datasource. Hugo does the rest.
 
 ## How to use
 
@@ -38,3 +44,7 @@ gomplate --config localcsv.yaml
 Navigate to `/hugo-demo/` and run `gomplate`
 
 Run `hugo server`
+
+## Notes
+
+Not a Hugo dev. Not a gomplate dev. Not a Go dev, more generally. 
