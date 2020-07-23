@@ -1,0 +1,19 @@
+in: | 
+    {{ $posts := datasource "posts" | data.ToJSON  }}
+    {{ $posts = $posts | data.JSONArray }}
+    {{ range $i, $e := $posts }}
+      {{ $file := $e.title | strings.Slug }}
+      {{ tmpl.Exec "postT" . | file.Write (print "outputs/api" $file ".md") }}
+    {{ end }}
+
+templates:
+  - postT=templates/api.tmpl
+      
+datasources:
+  posts:
+    url: https://jsonplaceholder.typicode.com/posts?type=application/array+json
+
+
+suppressEmpty: true
+outputFiles:
+  - api

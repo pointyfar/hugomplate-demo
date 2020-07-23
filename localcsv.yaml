@@ -1,0 +1,16 @@
+in: | 
+  {{ $posts := (datasource "posts") | data.ToCSV | data.CSVByRow }}
+  
+  {{ range $i, $e := $posts }}
+    {{ $file := $e.title | strings.Slug }}
+    {{ tmpl.Exec "postT" . | file.Write (print "outputs/localcsv/" $file ".md") }}
+  {{ end }}
+ 
+templates:
+  - postT=templates/localcsv.tmpl
+datasources:
+  posts:
+    url: sources/datasource.csv
+outputFiles: ["csv"]
+
+suppressEmpty: true

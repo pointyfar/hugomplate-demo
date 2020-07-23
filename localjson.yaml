@@ -1,0 +1,14 @@
+in: | 
+  {{ range (datasource "posts") }} 
+    {{ range . }}
+      {{ $file := .title | strings.Slug }}
+      {{ tmpl.Exec "postT" . | file.Write (print "outputs/localjson/" $file ".md") }}
+    {{ end }}
+  {{ end }}
+datasources:
+  posts:
+    url: sources/datasource.json 
+outputFiles: ["json"]
+templates:
+  - postT=templates/localjson.tmpl
+suppressEmpty: true

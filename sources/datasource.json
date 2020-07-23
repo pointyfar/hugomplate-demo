@@ -1,0 +1,21 @@
+{   
+    "posts" : [
+        {
+            "title": "Post1",
+            "content": "Lorem Ipsum Dolor Sit Amet",
+            "author": "Pointy"
+        },
+        {
+            "title": "Post2",
+            "content": "Hello Hello Hello",
+            "author": "Far"
+        },
+        {
+            "title": "Post Three",
+            "content": "Just some text here",
+            "author": "Far"
+        }
+        
+
+    ]
+}
