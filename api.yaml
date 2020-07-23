@@ -3,7 +3,7 @@ in: |
     {{ $posts = $posts | data.JSONArray }}
     {{ range $i, $e := $posts }}
       {{ $file := $e.title | strings.Slug }}
-      {{ tmpl.Exec "postT" . | file.Write (print "outputs/api" $file ".md") }}
+      {{ tmpl.Exec "postT" . | file.Write (print "outputs/api/" $file ".md") }}
     {{ end }}
 
 templates:
