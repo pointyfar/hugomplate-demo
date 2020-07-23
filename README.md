@@ -47,4 +47,4 @@ Run `hugo server`
 
 ## Notes
 
-Not a Hugo dev. Not a gomplate dev. Not a Go dev, more generally. 
+Not a Hugo dev. Not a gomplate dev. Not really a Go dev at all.
