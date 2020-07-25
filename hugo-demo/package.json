@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "license": "MIT",
     "scripts": {
-        "getgomplate": "npm install -g gomplate",
+        "getgomplate": "npm install -g gomplate && gomplate --version",
         "build:gomplate": "gomplate",
         "build:hugo": "hugo",
         "build": "npm run build:gomplate && npm run build:hugo",
