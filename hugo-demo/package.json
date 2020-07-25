@@ -1,0 +1,11 @@
+{
+    "name": "hugomplate",
+    "version": "0.0.1",
+    "license": "MIT",
+    "scripts": {
+        "getgomplate": "yarn global add gomplate",
+        "build:gomplate": "gomplate",
+        "build:hugo": "hugo",
+        "build": "yarn run build:gomplate && yarn run build:hugo"
+    }
+}
