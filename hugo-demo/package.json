@@ -3,9 +3,10 @@
     "version": "0.0.1",
     "license": "MIT",
     "scripts": {
-        "getgomplate": "yarn global add gomplate",
+        "getgomplate": "npm install -g gomplate",
         "build:gomplate": "gomplate",
         "build:hugo": "hugo",
-        "build": "yarn run build:gomplate && yarn run build:hugo"
+        "build": "npm run build:gomplate && npm run build:hugo",
+        "deploy": "npm run getgomplate && npm run build"
     }
 }
